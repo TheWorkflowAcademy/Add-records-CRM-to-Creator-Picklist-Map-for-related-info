@@ -20,7 +20,7 @@ Staffs of Company A wants a Creator Form, accessible from the Contacts module in
 ## Configuration - Creator Form Fields
 * Contact ID 
   * Number field
-  * Stores the main ID of the record
+  * Stores the ID of the main record (Contact)
   * The function will get the Contact's related Course Enrollments
   * Set field this as **admin only**.
 * Which Course Enrollment would you like to Update?
