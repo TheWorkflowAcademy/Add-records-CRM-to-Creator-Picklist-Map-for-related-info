@@ -1,0 +1,25 @@
+//Load the list of All Course Enrollments associated to the Contact, add names to radio field
+courseenrollments = zoho.crm.getRelatedRecords("Student_Enrolled","Contacts",input.Contact_ID); //Change this to your module names
+string = "";
+for each  c in courseenrollments
+{
+	input.Which_Course_Enrollment_would_you_like_to_Update:ui.add(c.get("Name"));   //Change this to your field name
+	string = string + "\"" + c.get("Name") + "\"" + ":" + c.get("id") + ",";
+}
+mapstring = "{" + string + "}";
+mapstring = mapstring.removeLastOccurence(",");
+
+//Stick names and ID's as key-value pairs into a map string in the multiline field
+input.Course_Enrollment_Name_and_ID_Map = mapstring;  //Change this to your field name
+
+//Get all Program Coordinators
+progs = zoho.crm.getRecords("Program_Coordinators");  //Change this to your module names
+string = "";
+for each  p in progs
+{
+	input.Who_should_become_the_new_Program_Coordinator:ui.add(p.get("Name"));  //Change this to your field name
+	string = string + "\"" + p.get("Name") + "\"" + ":" + p.get("id") + ",";
+}
+mapstring = "{" + string + "}";
+mapstring = mapstring.removeLastOccurence(",");
+input.Program_Coordinator_Name_and_ID_Map = mapstring;  //Change this to your field name
