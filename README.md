@@ -2,7 +2,7 @@
 A Creator script that loads related records from Zoho CRM and adds as values to a picklist (radio) field on Zoho Creator, then gets related info by creating maps and storing them in multi-line fields in Creator.
 
 ## Core Idea
-Zoho Creator has a nifty little feature that enables you to add values to a picklist (radio) field via Deluge. With the function, you can fetch records from Zoho CRM and dynamically populate them as field values in the Creator picklist field. Simultaneously, the function creates map strings (key-value pairs) containing relevant info based on the picklist, and adds to multi-line fields. This map strings will then be used by the function to execute certain actions upon form submission.
+Zoho Creator has a nifty little feature that enables you to add values to a picklist (radio) field via Deluge. With the function, you can fetch records from Zoho CRM and dynamically populate them as field values in the Creator picklist field. Simultaneously, by creating map strings (key-value pairs) containing relevant info based on the picklist to add to multi-line fields, we can easily get the related info to execute certain actions upon form submission.
 
 ## Example Case
 Staffs of Company A wants a Creator Form, accessible from the Contacts module in CRM. In that Form, they would like to be able to select one of the contacts's Course Enrollment (another module), then reassign that course's Program Coordinator (another module) for the student - there are 3 modules at play here.
